@@ -4,7 +4,6 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/Cursor";
-import Preloader from "@/components/Preloader";
 import "./globals.css";
 
 // Both families ship a native Greek design, so Greek text never falls back to a system font.
@@ -32,7 +31,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="el" className={`${display.variable} ${body.variable} antialiased`}>
       <body className="grain min-h-screen bg-ink text-ivory">
         <SmoothScroll>
-          <Preloader />
           <Cursor />
           <Header />
           {children}
