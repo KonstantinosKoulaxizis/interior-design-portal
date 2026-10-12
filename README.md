@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maria Michalakakou · Interior Design Portal (prototype)
 
-## Getting Started
+A clickable visual prototype for a high-end, Greek-language interior design studio site.
+It shows the immersive features we can offer, using mock content and freely licensed media.
 
-First, run the development server:
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The intro animation plays once per browser session.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What's inside
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Page | Route | What it shows |
+| --- | --- | --- |
+| Home | `/` | Wordmark preloader, cinematic scroll-zoom hero, word-by-word manifesto, pinned horizontal project gallery, material moodboard with cursor-follow previews, before/after slider, process steps |
+| 3D room | `/room` | Orbitable living room (React Three Fiber) with hotspots, sofa and armchair fabric swaps (glTF material variants), wall and floor finishes, and morning / dusk / night lighting moods |
+| 360° tour | `/tour` | Three-node virtual tour (Photo Sphere Viewer) with walk-through arrows, info hotspots and a room gallery |
+| Catalogue | `/catalogue` | Filterable product grid by category and room |
+| Product | `/catalogue/[slug]` | Rotatable 3D model with colour variants, specs and calls to action |
 
-## Learn More
+Site-wide: Lenis smooth scrolling, a custom cursor, page-transition curtain and a film-grain overlay.
 
-To learn more about Next.js, take a look at the following resources:
+## Design system
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Fonts:** Noto Serif Display (headings, wordmark) and Manrope (body). Both include full Greek, loaded via `next/font`.
+- **Palette** (`app/globals.css`): Ink `#0D0F12`, Graphite `#171B20`, Slate `#2A3038`, Steel blue `#7F9BB0`, Mist `#C5D3DD`, Ivory `#EEE9E1`, Bronze `#A88B67`.
+- **Wordmark:** `components/Wordmark.tsx`, spaced display capitals with an optional Greek tagline.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Content
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Mock copy, projects and products live in `lib/content.ts`. Media credits are in [CREDITS.md](CREDITS.md).
