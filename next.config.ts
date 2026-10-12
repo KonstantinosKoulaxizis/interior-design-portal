@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
   cacheComponents: true,
+  images: {
+    // the seasons tour is the whole first impression, so its photographs ship at higher quality
+    qualities: [75, 90],
+  },
   partialPrefetching: true,
   turbopack: {
     rules: {

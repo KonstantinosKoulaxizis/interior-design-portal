@@ -1,4 +1,4 @@
-import Hero from "@/components/home/Hero";
+import Seasons from "@/components/home/Seasons";
 import Projects from "@/components/home/Projects";
 import Moodboard from "@/components/home/Moodboard";
 import BeforeAfter from "@/components/home/BeforeAfter";
@@ -8,7 +8,7 @@ import Experiences from "@/components/home/Experiences";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Seasons />
       <Projects />
       <Moodboard />
       <BeforeAfter />
